@@ -1,0 +1,264 @@
+:root {
+  --black: #222222;
+  --white: #fdfdfc;
+  --light-blue: #9BB9BF;
+  --brown: #A6775B;
+  --off-white: #faf9f6;
+  --red: #D42727;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.left-side {
+  width: 33%;
+  background-image: url('../images/main-image.jpg');
+  background-size: cover;
+  z-index: 1;
+}
+
+.logo {
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.logo > img {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.right-side {
+  padding-top: 50px;
+  background-color: var(--off-white);
+  width: calc(100% - 33%);
+}
+
+.registration {
+  /* display: none; */
+}
+
+.section-header {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--black);
+  padding: 0 200px 50px 50px;
+}
+
+.inputs-section {
+  padding: 20px 200px 20px 50px;
+  background-color: var(--white);
+  box-shadow: 0px 3px 10px 3px rgba(150, 150, 150, 0.2); 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 10px 100px;
+}
+
+.form-title {
+  font-size: 1.4rem;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: var(--black);
+}
+
+label {
+  display: block;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.required-star {
+  font-size: 0.8rem;
+  color: var(--brown);
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  border: #E5E7EB solid 1px;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-weight: 300;
+  color: var(--black);
+  transition: all ease-in-out 200ms;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border: var(--brown) solid 1px;
+  outline: none;
+}
+
+::placeholder {
+  font-weight: 300;
+  color: #bebebe;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.7rem;
+  padding-top: 5px;
+  visibility: hidden;
+}
+
+.error {
+  border: var(--red) solid 1px;
+}
+
+.buttons-section {
+  padding: 20px 200px 50px 50px;
+  color: var(--black);
+}
+
+.submit-button > button {
+  background-color: var(--brown);
+  color: var(--off-white);
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: var(--brown) solid 1px;
+  transition: all ease-in-out 200ms;
+}
+
+.submit-button > button:hover {
+  background-color: var(--off-white);
+  color: var(--brown);
+}
+
+.login-button {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.login-button > a {
+  color: var(--brown);
+  transition: all ease-in-out 200ms;
+  position: relative;
+}
+
+.login-button > a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--brown);
+  transform-origin: bottom right;
+  transition: transform 200ms ease-out;
+}
+
+.login-button > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width:1400px){
+  .inputs-section {
+    gap: 10px 20px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .container {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .left-side {
+    width: 50%;
+  }
+
+  .logo {
+    padding: 30px 0;
+  }
+
+  .logo > img {
+    max-width: 200px;
+  }
+
+  .right-side {
+    width: 50%;
+    padding: 20px 0;
+  }
+
+  .section-header {
+    padding: 20px;
+  }
+
+  .inputs-section {
+    padding: 20px;
+    gap: 10px 10px;
+  }
+
+  .form-group {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .error-message {
+    font-size: 0.6rem;
+  }
+
+  .buttons-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .submit-button > button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .logo {
+    padding: 20px 0;
+    margin: 70px 0 230px 0;
+  }
+
+  .logo > img {
+    max-width: 150px;
+  }
+
+  .right-side {
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .section-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .form-title {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/signup.css">
+  <link rel="stylesheet" href="./styles/thankyou.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <title> TrueTravel - Signup</title>
+</head>
+<body>
+  <!-- Sign up Form -->
+  <main class="container">
+    <div class="left-side">
+      <div class="logo">
+        <img src="./images/TrueTravel-logo.png" alt="TrueTravel">
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="registration" id="registration">
+        <div class="section-header">
+          <p>
+            Do you want to get the best trip to a paradisiac island? Sign up now to get started.
+            <br><br>
+            You know you want to.
+          </p>
+        </div>
+        <div class="signup-form">
+          <form action="#" method="POST">
+            <div class="inputs-section">
+              <div class="form-title">
+                <p> Let's do This! </p>
+              </div>
+              <div class="form-group">
+                <label for="first-name">
+                  First Name
+                  <span class="required-star">*</span>
+                </label>
+                <input type="text" name="firstname" id="first-name" placeholder="John" required>
+                <p class="error-message" id="error-message-first-name"> * Please enter your first name </p>
+              </div>
+              <div class="form-group">
+                <label for="last-name">
+                  Last Name
+                  <span class="required-star">*</span>
+                </label>
+                <input type="text" name="lastname" id="last-name" placeholder="Doe" required>
+                <p class="error-message" id="error-message-last-name"> * Please enter your last name </p>
+              </div>
+              <div class="form-group">
+                <label for="email">
+                  Email
+                  <span class="required-star">*</span>
+                </label>
+                <input type="email" name="email" id="email" placeholder="johndoe@example.com" required>
+                <p class="error-message" id="error-message-email"> * Please enter your email </p>
+              </div>
+              <div class="form-group">
+                <label for="phone-number">
+                  Phone Number
+                  <span class="required-star">*</span>
+                </label>
+                <input type="number" name="phonenumber" id="phone-number" placeholder="76123456" required>
+                <p class="error-message" id="error-message-number"> * Please enter your phone number </p>
+              </div>
+              <div class="form-group">
+                <label for="password">
+                  Password
+                  <span class="required-star">*</span>
+                </label>
+                <input type="password" name="password" id="password" required>
+                <p class="error-message" id="error-message-password"> * Please enter a password </p>
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">
+                  Confirm Password
+                  <span class="required-star">*</span>
+                </label>
+                <input type="password" name="confirmpassword" id="confirm-password" required>
+                <p class="error-message" id="error-message-confirm-password"> * Please confirm your password </p>
+              </div>
+            </div>
+            <div class="buttons-section">
+              <div class="submit-button">
+                <button type="submit" id="submit"> Create Account </button>
+              </div>
+              <div class="login-button">
+                Already have an account? <a href="#"> Log in </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="thank-you" id="thankyou">
+        <img src="./images/thankyou-icon.png" alt="">
+        <h1> Thank you ! </h1>
+        <p> You are all set </p>
+        <div class="submit-button">
+          <button id="continue"> Continue </button>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  <script src="./script/validation.js"></script>
+</body>
+</html>

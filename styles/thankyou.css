@@ -1,0 +1,34 @@
+.thank-you {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .thank-you {
+    height: 50vh;
+  }
+}
+
+.thank-you > img {
+  max-width: 150px;
+  height: auto;
+}
+
+.thank-you > h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+
+.thank-you > p {
+  color: var(--black);
+  opacity: 0.6;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
